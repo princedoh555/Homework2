@@ -12,7 +12,26 @@ ul{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center;body {
+        font-family: Arial, sans-serif;
+    }
+    
+    form {
+        margin-bottom: 20px;
+    }
+    
+    input {
+        margin-right: 10px;
+    }
+    
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    li {
+        margin-bottom: 8px;
+    }
 }
 
 .main-title{
@@ -22,7 +41,7 @@ ul{
 
 li{
     cursor: pointer;
-    background: white;
+    background: red;
     margin: 10px;
     padding: 20px;
     font-size: 18px;
@@ -36,15 +55,15 @@ li{
 }
 
 .formItems{
-    margin-bottom: 50px;
+    margin-bottom: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .formItems input{
-    font-size: 28px;
-    padding: 10px 20px;
+    font-size: 30px;
+    padding: 110px 23px;
 }
 
 .formItems button{
@@ -63,10 +82,10 @@ li{
 
 .formItems button:active{
     background: black;
-    color:white;
+    color:red;
 }
 
 #completed li{
     text-decoration: line-through;
-    color:orange;
+    color:green;
 }

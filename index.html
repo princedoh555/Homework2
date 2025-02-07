@@ -2,39 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/myStyleSheet.css">
-    <title>More JavaScript</title>
+    <title>Contact List</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="content">
-        
-        <div>
-        <h1 class="main-title">A Simple To Do List</h1>
-        <h2>by Lawrence Doh</h2>
-        </div>
-
-        <div class="formItems">
-        <input id="newItemTxt" type="text">
-        <button id="newItemBtn" type="button">Add Item</button>
-        </div>
-
-        <div class="toDo">
-            <div id="pending">
-            <h2>Pending Items</h2>
-            <ul>
-            </ul>
-            </div>
-
-            <div id="completed">
-            <h2>Completed Items</h2>
-            <ul>
-            </ul>
-            </div>
-        </div>
-
-    </div>
-    <script src="scripts/myScripts.js"></script>
+    <h1>Contact List</h1>
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Enter name" required>
+        <input type="text" id="phone" placeholder="Enter phone number" required>
+        <button type="submit">Add Contact</button>
+    </form>
+    <ul id="contactList">
+        <!-- Contacts will be added here -->
+    </ul>
+    <script src="script.js"></script>
 </body>
 </html>
