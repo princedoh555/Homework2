@@ -1,14 +1,33 @@
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+const newItem = document.getElementById("newItemTxt");
+const addButton = document.getElementById("newItemBtn");
+const pendingList = document.getElementById("pending");
+const completedList = document.getElementById("completed");
 
-    const name = document.getElementById('name').value;
-    const phone = document.getElementById('phone').value;
+addButton.addEventListener("click", addItemFunc);
+function addItemFunc(){ 
+    if(newItem.value !=""){
+        const addItem = document.createElement("li")
+        addItem.innerHTML = newItem.value
+        pendingList.appendChild(addItem)
+        newItem.value = ""
+    }
+    else {
+        alert("Please provide a ringing bell to the to do list add.")
+    }
+}
 
-    const contactItem = document.createElement('li');
-    contactItem.textContent = `${name}: ${phone}`;
+pendingList.addEventListener("click", function(){ pendingEventFunc(event)})
+function pendingEventFunc(event){
+    if(event.target.localName == "li"){
+        const item = event.target
+        completedList.appendChild(item)
+    }
+}
 
-    document.getElementById('contactList').appendChild(contactItem);
-
-    document.getElementById('name').value = '';
-    document.getElementById('phone').value = '';
-});
+completedList.addEventListener("click",function(){completedEventFunc(event)})
+function completedEventFunc(event){
+    if(event.target.localName == "li"){
+        const item = event.target
+        pendingList.appendChild(item)
+    }
+}
